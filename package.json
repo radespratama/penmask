@@ -1,14 +1,16 @@
 {
   "name": "penmask",
   "version": "0.1.0",
-  "private": true,
+  "description": "Convert any image to pure css",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "bootstrap-icons": "^1.8.1",
+    "canvas-image-utils": "^2.1.1",
+    "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0",
+    "styled-components": "^5.3.5",
+    "tinycolor2": "^1.4.2",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.3",
     "workbox-broadcast-update": "^5.1.3",
@@ -26,13 +28,22 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radespratama/penmask.git"
+  },
+  "keywords": [
+    "img2css",
+    "images",
+    "css",
+    "pixelart",
+    "designtools"
+  ],
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -46,5 +57,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "author": "Rades Pratama",
+  "license": "MIT",
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.7"
   }
 }
