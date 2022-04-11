@@ -1,4 +1,10 @@
-<img align="center" src="https://github.com/radespratama/penmask.git/blob/main/public/static/banner-repo-penmask.jpg" />
+<p align="center">
+  <img align="center" src="https://github.com/radespratama/penmask/blob/main/public/static/banner-repo-penmask.jpg?raw=true" />
+  <a href="https://penmask.vercel.app">
+    <h2 align="center">Penmask</h2>
+  </a>
+</p> 
+<p align="center">⚡ Convert any image to pure CSS.</p>
 
 # 🚀 Quickstart
 
