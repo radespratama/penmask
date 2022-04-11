@@ -1,3 +1,5 @@
+<img align="center" src="https://github.com/radespratama/penmask.git/blob/main/public/static/banner-repo-penmask.jpg" />
+
 # 🚀 Quickstart
 
 ### Run the website locally

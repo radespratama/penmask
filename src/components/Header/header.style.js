@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   z-index: 10;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.06);
 `;
 
 export const Nav = styled.nav`
