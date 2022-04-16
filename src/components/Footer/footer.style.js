@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   max-width: 67.5rem;
   margin-inline: auto;
+  margin-bottom: 1rem;
 `;
 
 export const BoxLayout = styled.div`
