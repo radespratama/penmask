@@ -41,7 +41,7 @@ export const NavBrand = styled.img`
 export const NavLink = styled.a`
   cursor: pointer;
   margin: 0 0.8rem;
-  color: #fff;
+  color: ${({ theme }) => theme.global.white};
   font-size: 16px;
 
   &:hover {
@@ -57,4 +57,4 @@ export const Icons = styled.i`
   ::before {
     font-size: 1.5rem;
   }
-`
+`;

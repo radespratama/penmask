@@ -1,3 +1,4 @@
+import React from "react";
 import {
   HeaderContainer,
   Nav,
@@ -21,7 +22,7 @@ export default function Header() {
             href="https://github.com/radespratama/penmask.git"
             target="_blank"
           >
-            <Icons className="bi bi-github"></Icons>
+            <Icons className="bi bi-github" />
           </NavLink>
         </BoxLayout>
       </Nav>

@@ -15,10 +15,11 @@ export const BoxLayout = styled.div`
   align-items: center;
   justify-content: ${(props) => props.isPosition};
   flex: 1 100%;
+  padding: 0 1rem;
 `;
 
 export const FooterLink = styled.a`
-  color: #fff;
+  color: ${({ theme }) => theme.global.white};
   font-size: 16px;
 
   &:hover {
@@ -27,9 +28,8 @@ export const FooterLink = styled.a`
 `;
 
 export const FooterText = styled.h3`
-  color: #fff;
+  color: ${({ theme }) => theme.global.white};
   font-size: 16px;
   font-weight: 400;
   user-select: none;
 `;
-

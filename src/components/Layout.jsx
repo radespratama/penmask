@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 
 import Header from "./Header";
@@ -7,7 +8,7 @@ const MainWrapper = styled.main`
   flex-grow: 1;
   flex-wrap: wrap;
   min-height: 100vh;
-  max-width: 67.5rem;
+  max-width: 80rem;
   margin-inline: auto;
   padding-top: 4.5rem;
 `;

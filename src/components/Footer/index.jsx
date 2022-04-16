@@ -1,3 +1,4 @@
+import React from "react";
 import {
   BoxLayout,
   FooterContainer,
@@ -10,12 +11,17 @@ export default function Footer() {
     <FooterContainer>
       <BoxLayout isPosition="flex-start">
         <FooterText>
-          Build using{" "}
+          Build using
+          {" "}
           <FooterLink href="https://reactjs.org/">⚡React</FooterLink>
         </FooterText>
       </BoxLayout>
       <BoxLayout isPosition="flex-end">
-        <FooterText>@Penmask {new Date().getFullYear()}</FooterText>
+        <FooterText>
+          @Penmask
+          {' '}
+          {new Date().getFullYear()}
+        </FooterText>
       </BoxLayout>
     </FooterContainer>
   );

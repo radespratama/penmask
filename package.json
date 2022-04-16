@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Convert any image to pure css",
   "dependencies": {
+    "jbx": "^2.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0",
@@ -12,7 +13,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -51,6 +53,12 @@
     "babel-plugin-styled-components": "^2.0.7",
     "bootstrap-icons": "^1.8.1",
     "canvas-image-utils": "^2.1.1",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
     "lodash": "^4.17.21",
     "tinycolor2": "^1.4.2"
   }
