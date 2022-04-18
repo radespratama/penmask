@@ -1,23 +1,14 @@
-import React from 'react';
-import styled from "styled-components";
+import React from "react";
+import { ContainerLayout } from "@devplayhouse/rdx";
 
 import Header from "./Header";
 import Footer from "./Footer";
-
-const MainWrapper = styled.main`
-  flex-grow: 1;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  max-width: 80rem;
-  margin-inline: auto;
-  padding-top: 4.5rem;
-`;
 
 export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <MainWrapper>{children}</MainWrapper>
+      <ContainerLayout>{children}</ContainerLayout>
       <Footer />
     </>
   );

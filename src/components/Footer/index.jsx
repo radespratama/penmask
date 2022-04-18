@@ -1,17 +1,21 @@
 import React from "react";
-import { BoxLayout, PenmaskFooter, FtLink, FtH3 } from "./footer.style";
+import { LayoutWrapper, BoxLayout, H3, A } from "@devplayhouse/rdx";
 
 export default function Footer() {
   return (
-    <PenmaskFooter>
-      <BoxLayout isPosition="flex-start">
-        <FtH3>
-          Build using <FtLink href="https://reactjs.org/">⚡React</FtLink>
-        </FtH3>
-      </BoxLayout>
-      <BoxLayout isPosition="flex-end">
-        <FtH3>@Penmask {new Date().getFullYear()}</FtH3>
-      </BoxLayout>
-    </PenmaskFooter>
+    <footer>
+      <LayoutWrapper maxWidth={80} mb={10}>
+        <BoxLayout isPosition="flex-start">
+          <H3 fontSize={16} isColor="#FFF">
+            Build using <A href="https://reactjs.org/">⚡React</A>
+          </H3>
+        </BoxLayout>
+        <BoxLayout isPosition="flex-end">
+          <H3 fontSize={16} isColor="#FFF">
+            @Penmask {new Date().getFullYear()}
+          </H3>
+        </BoxLayout>
+      </LayoutWrapper>
+    </footer>
   );
 }

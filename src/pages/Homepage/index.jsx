@@ -4,21 +4,21 @@ import tinycolor from "tinycolor2";
 import _ from "lodash";
 import { imageToRGBMatrix, imageToRawData } from "canvas-image-utils";
 
-import Layout from "components/Layout";
 import {
-  Title,
-  TextStyleSpan,
+  TitleH1,
   BlockContainer,
   Block,
   Text,
   Dropzone,
-  InputFile,
   Tabs,
+  InputFile,
   Inline,
-  Tab,
+  Button,
   ImagePreview,
   Textarea,
-} from "./homepage.style";
+  TextStyle,
+} from "@devplayhouse/rdx";
+import Layout from "components/Layout";
 
 function compressColor(rgb) {
   const hex = tinycolor(rgb).toHexString();
@@ -114,25 +114,26 @@ export default function Homepage() {
 
   return (
     <Layout>
-      <Title>
-        Convert any <TextStyleSpan>image</TextStyleSpan> to pure css
-      </Title>
+      <TitleH1 fontSize={50} isColor="#FFF">
+        Convert any <TextStyle isColor="#00a8ff">image</TextStyle> to pure css
+      </TitleH1>
       <BlockContainer>
         <Block>
-          <Text textColor="#FFF" mb={16}>
+          <Text isColor="#FFF" mb={16}>
             Let's get started :
           </Text>
           <Dropzone
+            isColor="#C4C4C4"
             onDrop={onFileSelected}
             onDragOver={onDragOver}
             onDragEnter={onDragOver}
           >
             {loadingImage ? (
-              <Text textColor="#FFF">Processing...</Text>
+              <Text isColor="#FFF">Processing...</Text>
             ) : (
               <Tabs>
-                <Text textColor="#FFF">Drop an image here</Text>
-                <Text textColor="#FFF">or click to select</Text>
+                <Text isColor="#FFF">Drop an image here</Text>
+                <Text isColor="#FFF">or click to select</Text>
               </Tabs>
             )}
             <InputFile
@@ -145,35 +146,35 @@ export default function Homepage() {
           </Dropzone>
         </Block>
         <Block>
-          <Text textColor="#FFF" mb={16}>
+          <Text isColor="#FFF" mb={16}>
             Result :
           </Text>
           {rgbMatrix && (
             <>
               <Inline>
-                <Tab
+                <Button
                   active={outputType === "SHADOW"}
                   key={"SHADOW"}
                   onClick={() => {
                     outputTypeSet("SHADOW");
                   }}
                 >
-                  <Text textColor="#1F2937">{"Pure CSS"}</Text>
-                </Tab>
-                <Tab
+                  <Text isColor="#1F2937">{"Pure CSS"}</Text>
+                </Button>
+                <Button
                   active={outputType === "BASE64"}
                   key={"BASE64"}
                   onClick={() => {
                     outputTypeSet("BASE64");
                   }}
                 >
-                  <Text textColor="#1F2937">{"Base64"}</Text>
-                </Tab>
+                  <Text isColor="#1F2937">{"Base64"}</Text>
+                </Button>
               </Inline>
               {outputType === "BASE64" && (
                 <>
                   <Tabs>
-                    <Text textColor="#fff" mb={12} mt={12} LHeight={25}>
+                    <Text isColor="#fff" mb={12} mt={12} leading={25}>
                       <strong>The result (base64).</strong>{" "}
                       {
                         "This is your image tag a base64 output. The entire image file is embedded inside the `<img>` tag using base64, so no need external hosting is needed."
@@ -181,15 +182,16 @@ export default function Homepage() {
                     </Text>
                     <ImagePreview src={base64Data} alt="Preview" />
                     <Textarea
+                      maxWidth={80}
+                      h={256}
                       onChange={() => {}}
-                      className="code"
                       value={`<img src="${base64Data}" />`}
                     />
-                    <Text textColor="#fff" mt={6} mb={3}>
+                    <Text isColor="#fff" mt={6} mb={3}>
                       Output size (resized):{" "}
                       {base64Data.length.toLocaleString()}b
                     </Text>
-                    <Text textColor="#fff" mt={3}>
+                    <Text isColor="#fff" mt={3}>
                       Original size: {Number(originalSize).toLocaleString()}b
                     </Text>
                   </Tabs>
@@ -198,7 +200,7 @@ export default function Homepage() {
               {outputType === "SHADOW" && (
                 <>
                   <Tabs>
-                    <Text textColor="#FFF" mb={12} mt={12} LHeight={25}>
+                    <Text isColor="#FFF" mb={12} mt={12} leading={25}>
                       <strong>The result (pure CSS).</strong> This is your pure
                       CSS (and single div) image, enjoy! This output was created
                       by resizing and setting each pixel as a box-shadow of a
@@ -219,18 +221,20 @@ export default function Homepage() {
                     <Textarea
                       onFocus={handleFocus}
                       onChange={() => {}}
-                      className="code"
+                      maxWidth={80}
+                      h={256}
+                      style={{ marginTop: "1rem" }}
                       value={`<div style="margin-right: ${
                         rgbMatrix[0].length * scale
                       }px; margin-bottom: ${
                         rgbMatrix.length * scale
                       }px; height: 1px; width: 1px; box-shadow: ${masterShadow}"></div>`}
                     />
-                    <Text textColor="#fff" mt={6} mb={3}>
+                    <Text isColor="#fff" mt={6} mb={3}>
                       Output size (resized):{" "}
                       {masterShadow.length.toLocaleString()}b
                     </Text>
-                    <Text textColor="#fff" mt={3}>
+                    <Text isColor="#fff" mt={3}>
                       Original size: {Number(originalSize).toLocaleString()}b
                     </Text>
                   </Tabs>

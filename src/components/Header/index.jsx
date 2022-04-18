@@ -1,31 +1,34 @@
 import React from "react";
+import styled from "styled-components";
 import {
-  PenmaskHeader,
-  Nav,
+  Header as Headers,
+  LayoutWrapper,
   BoxLayout,
-  NavBrand,
-  NavLink,
-  Icons,
-} from "./header.style";
+  ImgBrand,
+  A,
+} from "@devplayhouse/rdx";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
+const Icons = styled.i`
+  ::before {
+    font-size: 1.5rem;
+  }
+`;
 
 export default function Header() {
   return (
-    <PenmaskHeader>
-      <Nav>
+    <Headers position="fixed">
+      <LayoutWrapper maxWidth={80} p={16}>
         <BoxLayout isPosition="flex-start">
-          <NavBrand src="/static/penmask.svg" alt="Penmask logo" />
+          <ImgBrand sizeImg={2.7} src="/static/penmask.svg" alt="Penmask logo" />
         </BoxLayout>
         <BoxLayout isPosition="flex-end">
-          <NavLink href="/">More tools</NavLink>
-          <NavLink
-            href="https://github.com/radespratama/penmask.git"
-            target="_blank"
-          >
+          <A mr={12} href="/comingsoon">More tools</A>
+          <A href="https://github.com/radespratama/penmask.git" target="_blank">
             <Icons className="bi bi-github" />
-          </NavLink>
+          </A>
         </BoxLayout>
-      </Nav>
-    </PenmaskHeader>
+      </LayoutWrapper>
+    </Headers>
   );
 }
