@@ -1,28 +1,17 @@
 import React from "react";
-import {
-  BoxLayout,
-  FooterContainer,
-  FooterLink,
-  FooterText,
-} from "./footer.style";
+import { BoxLayout, PenmaskFooter, FtLink, FtH3 } from "./footer.style";
 
 export default function Footer() {
   return (
-    <FooterContainer>
+    <PenmaskFooter>
       <BoxLayout isPosition="flex-start">
-        <FooterText>
-          Build using
-          {" "}
-          <FooterLink href="https://reactjs.org/">⚡React</FooterLink>
-        </FooterText>
+        <FtH3>
+          Build using <FtLink href="https://reactjs.org/">⚡React</FtLink>
+        </FtH3>
       </BoxLayout>
       <BoxLayout isPosition="flex-end">
-        <FooterText>
-          @Penmask
-          {' '}
-          {new Date().getFullYear()}
-        </FooterText>
+        <FtH3>@Penmask {new Date().getFullYear()}</FtH3>
       </BoxLayout>
-    </FooterContainer>
+    </PenmaskFooter>
   );
 }

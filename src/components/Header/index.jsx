@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  HeaderContainer,
+  PenmaskHeader,
   Nav,
   BoxLayout,
   NavBrand,
@@ -11,7 +11,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function Header() {
   return (
-    <HeaderContainer>
+    <PenmaskHeader>
       <Nav>
         <BoxLayout isPosition="flex-start">
           <NavBrand src="/static/penmask.svg" alt="Penmask logo" />
@@ -26,6 +26,6 @@ export default function Header() {
           </NavLink>
         </BoxLayout>
       </Nav>
-    </HeaderContainer>
+    </PenmaskHeader>
   );
 }

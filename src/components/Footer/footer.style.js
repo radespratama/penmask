@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.footer`
+export const PenmaskFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 67.5rem;
+  max-width: 80rem;
   margin-inline: auto;
   margin-bottom: 1rem;
 `;
@@ -18,7 +18,7 @@ export const BoxLayout = styled.div`
   padding: 0 1rem;
 `;
 
-export const FooterLink = styled.a`
+export const FtLink = styled.a`
   color: ${({ theme }) => theme.global.white};
   font-size: 16px;
 
@@ -27,7 +27,7 @@ export const FooterLink = styled.a`
   }
 `;
 
-export const FooterText = styled.h3`
+export const FtH3 = styled.h3`
   color: ${({ theme }) => theme.global.white};
   font-size: 16px;
   font-weight: 400;

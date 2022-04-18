@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
+export const PenmaskHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header`
 
 export const Nav = styled.nav`
   position: relative;
-  max-width: 67.5rem;
+  max-width: 80rem;
   margin-inline: auto;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ export const BoxLayout = styled.div`
   display: flex;
   align-items: center;
   justify-content: ${(props) => props.isPosition};
-  flex: 1 100%;
+  flex: 1;
   margin: 0 1rem;
 
   @media screen and (max-width: 960px) {

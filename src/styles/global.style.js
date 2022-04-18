@@ -5,8 +5,8 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: ${(props) => props.theme.global}, sans-serif;
-    scrollbar-width: none;
     scroll-behavior: smooth;
+    position: relative;
   }
   
   html, body, header, footer {
@@ -19,9 +19,5 @@ export default createGlobalStyle`
 
   img {
     max-width: 100%
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 `;
